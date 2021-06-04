@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Family Book</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="text-align: center;">
+        <h1>My Family Book</h1>
+        <img src="GRANDPA.jpeg" style="width: 280px; height: 350px;" id="Family_member_image">
+        <h4 id="Family_member_name">My maternal Grandfather(singaiah p)</h4>
+        <div class="div_with_buttons">
+            <button id="Backbutton" onclick="Back();">Back</button>
+            <button id="Nextbutton" onclick="update();">Next</button>
+        </div>
+            <h4 class="Explaining">There Is 15 Images And Names. Click Next To Continue. Click Back To Go Back.</h4>
+        <script>
+            var images = [
+                "GRANDPA.jpeg",
+                "GRANDMA.jpeg",
+                "DADDY.jpeg",
+                "MOM.jpeg",
+                "KAAVYA.jpeg",
+                "KARTHIK.jpeg",
+                "SHIBBU.jpeg",
+                "NANI.jpeg",
+                "narayana rao mama.jpeg",
+                "ATTA.jpeg",
+                "CHANDRA MAMA.jpeg",
+                "HEMA ODINA.jpeg",
+                "CHAITU BABAI.jpeg",
+                "SISTER.jpeg",
+                "FAMILY PHOTO.JPG",
+               
+            ];
+            var names = [
+                "My maternal Grandfather (P.singaiah)",
+                "My maternal Grandmother (P.anjamma)",
+                "My Father (V.venkata subbarao)",
+                "My Mother (V.rajyalakshmi)",
+                "My Sister (V.kaavya)",
+                "My Name Is (V.jitendra sai karthik)",
+                "My cat name (shibbu)",
+                "My paternal grandmother (V.pullama nani)",
+                "MY uncle(narayana rao mama)",
+                "My aunt (D.koteswarama atta)",
+                "My Cousin Brother (D.chandra mama)",
+                "My Cousin Sister (C.hema odina)",
+                "My babai (C.chaitanya babai)",
+                "MY cousin sister(C.teju)",
+                "My family photo(PVDC.my best family)"
+                
+                
+            ];
+            var i = 0;
+            function update() {
+                i++;
+                var Numbers_of_family_member_in_array = 15
+                if(i > Numbers_of_family_member_in_array)
+                {
+                    i = 0;
+                }
+                var updatedimage = images[i];
+                var updatedname = names[i];
+                document.getElementById("Family_member_image").src = updatedimage;
+                document.getElementById("Family_member_name").innerHTML = updatedname;
+            }
+            function Back() {
+                i--;
+                var Numbers_of_family_member_in_array2 = 0
+                if(i < Numbers_of_family_member_in_array2)
+                {
+                    i = 15;
+                }
+                var updatedimage2 = images[i];
+                var updatedname2 = names[i];
+                document.getElementById("Family_member_image").src = updatedimage2;
+                document.getElementById("Family_member_name").innerHTML = updatedname2;
+            };
+        </script>
+   </body>
+</html>
